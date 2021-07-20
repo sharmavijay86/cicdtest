@@ -69,14 +69,14 @@ pipeline {
                 
                 } 
         } 
-                       
-    }
-         stage('deploy on k8s') {
+        stage('deploy on k8s') {
             steps {
               sh 'echo deploy on kubernetes cluster'
               sh 'sleep 20'
             }
-        }
+        }                  
+    }
+
       post {
         always {
             cleanWs()
