@@ -64,6 +64,8 @@ pipeline {
                     sh """
                     git add --all
                     git commit -m "foobar" 
+                    git config --global user.email "sharmavijay86@gmail.com"
+                    git config --global user.name "vijay"
                     git push https://${USER}:${encodedPass}@github.com/sharmavijay86/cicdtest.git 
                     """
                     }
